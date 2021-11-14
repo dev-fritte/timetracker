@@ -16,15 +16,16 @@ const HomeNavigator = () => {
     const styles = useStyleSheet(themedStyles);
 
     return (
-        <Tab.Navigator screenOptions={{
-            headerStyle: styles.header,
-            tabBarStyle: styles.tabBar,
-            tabBarActiveTintColor: '#EB690C',
-            headerTitleStyle: {
-                fontWeight: 'bold',
-                color: 'white',
-            },
-        }}>
+        <Tab.Navigator tabBarOptions={{keyboardHidesTabBar: true}}
+                       screenOptions={{
+                           headerStyle: styles.header,
+                           tabBarStyle: styles.tabBar,
+                           tabBarActiveTintColor: '#EB690C',
+                           headerTitleStyle: {
+                               fontWeight: 'bold',
+                               color: 'white',
+                           },
+                       }}>
             <Tab.Screen name='Tracking' component={HomeScreen}
                         options={{
                             tabBarIcon: ({color}) => (
